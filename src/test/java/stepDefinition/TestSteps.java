@@ -6,33 +6,37 @@ import io.cucumber.java.en.When;
 
 
 public class TestSteps {
+    static int A1;
+    static int B1;
+    static int AB;
 
-    @When("^Ввод числа a$")
-    public static int getA()
-    {
-
-        int A = 13;
-        return A;
+    public TestSteps() {
     }
 
-    @When("^Ввод числа b$")
-    public static int getB()
-    {
-        int B = 100;
-        return B;
+    @When("Ввод первого числа {int}")
+    public static int getA(Integer A) {
+        A1 = A;
+        System.out.println("переменная A= " + A1);
+        return A1;
     }
 
-    @Then("^Сложение чисел$")
-    public static int addAB()
-    {
-       int AB = getA() + getB();
-       return AB;
+    @When("Ввод второго числа {int}")
+    public static int getB(Integer B) {
+        B1 = B;
+        System.out.println("переменная B= " + B1);
+        return B1;
     }
 
-    @And("^Вывести результат$")
-    public static void showResult()
-    {
-       int result = addAB();
-       System.out.println(result);
+    @Then("Сложение числа")
+    public static int AddAB() {
+        AB = A1 + B1;
+        System.out.println("Складываем " + A1 + "+" + B1);
+        return AB;
+    }
+
+    @And("Вывести результат")
+    public static void showResult() {
+        int result = AB;
+        System.out.println("Сумма:" + result);
     }
 }

@@ -1,5 +1,8 @@
+import hooks.WebHooks;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import stepDefinition.TestSteps;
 
@@ -11,7 +14,9 @@ import stepDefinition.TestSteps;
                 glue = {"/stepDefinition"},
                 tags = "@TEST"
         )
-public class RunnerTest {
+
+@DisplayName("cucumber test")
+public class  RunnerTest extends WebHooks {
 
 
 }

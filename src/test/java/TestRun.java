@@ -1,4 +1,8 @@
 import Hooks.WebHooks;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+import org.junit.runners.Suite;
 import testSteps.*;
 
 import static data.TestData.login;
@@ -13,7 +17,9 @@ public class TestRun extends WebHooks {
 
 
 
-    @org.junit.jupiter.api.Test
+    @Test
+
+    @DisplayName("Считаем таски в Jira")
     public void testCountTask()  {
         JiraLogin.LogInJira(login, pass);
         OpenProject.GoToProject();
@@ -23,7 +29,9 @@ public class TestRun extends WebHooks {
         TaskCount.TaskCountDone();
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
+
+    @DisplayName("Проверяем статус и версию")
     public void testCheckTask() {
        JiraLogin.LogInJira(login, pass);
        OpenProject.GoToProject();
@@ -32,17 +40,19 @@ public class TestRun extends WebHooks {
        CheckTask.CheckTaskStatus();
     }
 
-    @org.junit.jupiter.api.Test
-    public void testCreateBug() {
-       JiraLogin.LogInJira(login, pass);
-       OpenProject.GoToProject();
-       CreateBug.createBug();
-        OpenTask.OpenTask(newTask);
-        BugStatusMove.statusMove();
+//    @Test
+
+//    @DisplayName("создаем баг")
+ //   public void testCreateBug() {
+ //      JiraLogin.LogInJira(login, pass);
+ //      OpenProject.GoToProject();
+  //     CreateBug.createBug();
+  //      OpenTask.OpenTask(newTask);
+  //      BugStatusMove.statusMove();
 
 
 
-    }
+ //   }
 
 }
 

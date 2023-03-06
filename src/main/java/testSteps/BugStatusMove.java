@@ -1,5 +1,6 @@
 package testSteps;
 
+import io.qameta.allure.Step;
 import org.junit.Assert;
 
 import java.time.Duration;
@@ -9,6 +10,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 import static pagesElement.TaskElements.*;
 
 public class BugStatusMove {
+    @Step("Передвигаем задачу по статусам")
     public static void statusMove() {
 
 

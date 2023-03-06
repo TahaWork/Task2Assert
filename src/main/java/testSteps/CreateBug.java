@@ -1,5 +1,6 @@
 package testSteps;
 
+import io.qameta.allure.Step;
 import org.junit.Assert;
 
 import java.time.Duration;
@@ -11,6 +12,7 @@ import static data.TestData.*;
 import static pagesElement.ProjectElements.*;
 
 public class CreateBug {
+    @Step("Создаем задачу {taskText}")
 
     public static void createBug() {
 

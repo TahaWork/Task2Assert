@@ -6,7 +6,7 @@ public class TestData {
     public static String taskName = "TestSelenium";
     public static String taskType = "Ошибка";
     public static String taskSprint = "Доска Спринт 1";
-    public static String taskText = "Все отлично работает, просто хотела похвалить разработчиков";
+    public static String taskText = "Все отлично работает, просто хотела похвалить разработчиков111";
     public static String taskSubj = "Все отлично работает";
 
 }
